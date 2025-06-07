@@ -1,128 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact - M. A. Idaiye & Co</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #ffffff;
-    color: #333333;
-  }
-  header, footer {
-    background-color: #001f3f;
-    color: white;
-    padding: 1rem 2rem;
-  }
-  a {
-    color: #001f3f;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .container {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-  nav a {
-    margin-right: 1rem;
-  }
-  form {
-    max-width: 400px;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  input[type="submit"] {
-    background-color: #001f3f;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  input[type="submit"]:hover {
-    background-color: #004080;
-  }
-</style>
+    <meta charset="UTF-8">
+    <title>Contact - M. A. Idaiye & Co.</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <h1>M. A. Idaiye & Co Law Office</h1>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
-
-<div class="container">
-  <h2>Contact Us</h2>
-  <form id="contactForm">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" required /><br />
-
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required /><br />
-
-    <label for="message">Message:</label><br />
-    <textarea id="message" name="message" rows="5" required></textarea><br />
-
-    <input type="submit" value="Send" />
-  </form>
-  <p id="responseMessage" style="color:green;"></p>
-</div>
-
-<footer>
-  <div class="container">
-    <p>&copy; 2025 M. A. Idaiye & Co. All rights reserved.</p>
-  </div>
-</footer>
-
-<script>
-// Use Formspree to send email from static site
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value,
-  };
-
-  // Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree URL (see below)
-  fetch('https://formspree.io/f/mvgrzjao', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => {
-      if (response.ok) {
-        form.reset();
-        document.getElementById('responseMessage').textContent = 'Thank you for contacting us. We will get back to you shortly.';
-      } else {
-        document.getElementById('responseMessage').textContent = 'Oops! There was a problem submitting your form.';
-        document.getElementById('responseMessage').style.color = 'red';
-      }
-    })
-    .catch(() => {
-      document.getElementById('responseMessage').textContent = 'Oops! There was a problem submitting your form.';
-      document.getElementById('responseMessage').style.color = 'red';
-    });
-});
-</script>
+    <section>
+        <h2>Send Us a Message</h2>
+        <form action="https://formspree.io/f/mvgrzjao" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="_replyto" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 M. A. Idaiye & Co.</p>
+    </footer>
 </body>
 </html>
-
