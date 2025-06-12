@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About - M. A. Idaiye & Co.</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-<header>
-    <h1>M. A. Idaiye & Co.</h1>
-    <p>Legal Practitioners & Consultants</p>
-</header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+   <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- MY EXTERNAL CSS  -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>M. A. Idaiye & Co. | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nav_bar.js"></script>
+</head>
+
+<body id="body" class="">
+    <div class="page_body">
+        <!-- HIDDEN NAVBAR  -->
+        <div id="nav_bar" class="">
+            <ul class="nav_list">
+                <a id="nav_close_mark" class="" href="#"><i onclick="nav_bar.classList.remove('active_nav')"
+                        class="fa-solid fa-xmark"></i></a>
+                <li><a href="index.html">home</a></li>
+		        <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </div>
+        <header>
+            <div class="header_box">
+                <div class="header_logo">
+                    <img src="./assets/images/header_icon_ovall.png" alt="header_logo" />
+                    <h3>M. A. Idaiye & Co</h3>
+                </div>
+                <a class="change_button" onclick="body.classList.toggle('dark')" href="#">Change Mode</a>
+                <nav class="header_nav">
+                    <ul class="nav_list">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+                <div class="header_search_bar">
+                    <!-- <img src="./assets/images/header_search_outline.png" alt="search-outline"> -->
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <!-- HIDDEN NAV ICON  -->
+                <div class="nav_icon">
+                    <a href="#"><i onclick="nav_bar.classList.add('active_nav')"
+                            class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+        </header>
     <section>
         
         <h2>About M. A. Idaiye & Co.</h2>
@@ -27,12 +63,14 @@
     
     </section>
     
-<footer>
-    <p>&copy; 2025 M. A. Idaiye & Co. | 
-    <a href="tel:+2348023510440" style="color:white;">Call Us</a> | 
-    <a href="https://wa.me/2348023510440" style="color:white;">WhatsApp</a>
-    </p>
-</footer>
+<    </div>
+        <footer id="site-footer">
+       		 <p>Copyright &copy; 2025 M. A. Idaiye & Co</p>
+        		<a href="https://api.whatsapp.com/send?phone=2348023510440">
+            			<img src="./assets/images/whatsapp-logo.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+       			</a>
+   	 </footer>
+    </div>
 
 </body>
 </html>
