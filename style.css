@@ -1,56 +1,134 @@
-
-/* style.css - Basic styling for the portfolio site */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #f5f5dc;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #F5F5DC;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
+    list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    float: left;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #111;
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-section {
-    padding: 20px;
-    background-color: white;
+.hero-container h1 {
+    font-size: 3rem;
+}
+
+.hero-container p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Background Image for About Us Section */
+#about {
+    background: url('about-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Background Image for Services Section */
+#services {
+    background: url('services-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-item {
+    display: inline-block;
     margin: 20px;
-    border-radius: 8px;
+    width: 300px;
+}
+
+/* Background Image for Our Team Section */
+#team {
+    background: url('team-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team-member {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Background Image for Contact Us Section */
+#contact {
+    background: url('contact-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 footer {
-    background-color: #f5f5dc;
+    background-color: #F5F5DC;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
 }
