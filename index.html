@@ -12,197 +12,89 @@
         rel="stylesheet" />
     <!-- FONT AWESOME  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- MY EXTERNAL CSS  -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>M. A. Idaiye & Co. | Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="nav_bar.js"></script>
 </head>
 
 <body id="body" class="">
-    <div class="page_body">
-        <!-- HIDDEN NAVBAR  -->
-        <div id="nav_bar" class="">
-            <ul class="nav_list">
-                <a id="nav_close_mark" class="" href="#"><i onclick="nav_bar.classList.remove('active_nav')"
-                        class="fa-solid fa-xmark"></i></a>
-                <li><a href="index.html">home</a></li>
-		        <li><a href="contact.html">contact</a></li>
-                <li><a href="about.html">about</a></li>
-            </ul>
+    
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <div class="topnav-right">
+            <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+            <a href="about.html"><i class="fa fa-fw fa-info-circle"></i>About</a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="services.html"><i class="fa fa-fw fa-cogs"></i> Our Services</a>
         </div>
-        <header>
-            <div class="header_box">
-                <div class="header_logo">
-                    <img src="./assets/images/header_icon_ovall.png" alt="header_logo" />
-                    <h3>M. A. Idaiye & Co</h3>
-                </div>
-                <a class="change_button" onclick="body.classList.toggle('dark')" href="#">Change Mode</a>
-                <nav class="header_nav">
-                    <ul class="nav_list">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                        <li><a href="about.html">about</a></li>
-                    </ul>
-                </nav>
-                <div class="header_search_bar">
-                    <!-- <img src="./assets/images/header_search_outline.png" alt="search-outline"> -->
-                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
-                <!-- HIDDEN NAV ICON  -->
-                <div class="nav_icon">
-                    <a href="#"><i onclick="nav_bar.classList.add('active_nav')"
-                            class="fa-solid fa-ellipsis-vertical"></i></a>
-                </div>
-            </div>
-        </header>
-        <section id="banner_id" class="banner_sec">
-            <div class="banner_div container">
-                <div class="left_info_div">
-                    <div class="news_div">
-                        <a href="#">New</a>
-                        <p class="news_p">Stay connected to the upcoming & Recent jobs</p>
-                    </div>
-                    <h1 class="slogan">Your Solution Legal Consultancy</h1>
-                    <p class="des_p">We are here to help you take care of your legality with the best service especially for you.</p>
-                    <a class="get_start_button" href="contact.html">
-                        <p>get started</p>
-                    </a>
+    </div>
 
-                    <h4 class="company_pararaph">
-                        Trusted by 10+ companies in Nigeria
-                    </h4>
-                    <div class="company_logo_div">
-                        <ul>
-                            <li><a href="https://airbnb.com/" target="_blank"><img src="./assets/images/company_logos/Airbnb_logo.png" alt="Airbnb_logo" /></a></li>
-                            <li><a href="https://hubspot.com/" target="_blank"><img src="./assets/images/company_logos/Hubspot_Logo.png" alt="Hubspot_Logo" /></a></li>
-                            <li><a href="https://microsoft.com/" target="_blank"><img src="./assets/images/company_logos/Microsoft_Logo.png" alt="Microsoft_Logo" /></a></li>
-                            <li><a href="https://google.com/" target="_blank"><img src="./assets/images/company_logos/Google_Logo.png" alt="Google_Logo" /></a></li>
-                        </ul>
-                    </div>
-                    <div class="big_ellipse"></div>
-                    <div class="small_ellipse"></div>
-                    <div class="photo_div">
-                        <img src="./assets/images/banner_image_lawyer.png" alt="lawyer-image-banner" />
-                        <div class="lawyer_info">
-                            <h2 class="lawyer_name">M.A. Idaiye Esq</h2>
-                            <p class="designation">Lawyer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="service_sec">
-            <div class="service_div">
-                <div class="service_info_left">
-                    <div class="info_box">
-                        <h4>Why do we help with legalization?</h4>
-                        <p>We are here for M. A. Idaiye & Co in Nigeria to carry out the legalization process, which is sometimes complicated.</p>
-                    </div>
-                </div>
-                <div class="service_list_right">
-                    <div class="service_list_box">
-                        <div class="single_service_box">
-                            <div class="image">
-                                <img src="./assets/images/service_icons/Circle_Layer.png" alt="service-icon" />
-                            </div>
-                            <h5>Enviromental Law</h5>
-                            <p>Environmental legal issues might occur since the planned business activities are designed</p>
-                        </div>
-                        <div class="single_service_box">
-                            <div class="image">
-                                <img src="./assets/images/service_icons/Bag.png" alt="service-icon" />
-                            </div>
-                            <h5>Corporate and Commercial</h5>
-                            <p>We provide a complete range of services for the continuity of your business activities.</p>
-                        </div>
-                        <div class="single_service_box">
-                            <div class="image">
-                                <img src="./assets/images/service_icons/Rocket.png" alt="service-icon" />
-                            </div>
-                            <h5>Information and Technology</h5>
-                            <p>IT not followed by the existing regulation which might cause legal uncertainty and business uncertainty.</p>
-                        </div>
-                        <div class="single_service_box">
-                            <div class="image">
-                                <img src="./assets/images/service_icons/User_Arrows.png" alt="service-icon" />
-                            </div>
-                            <h5>Other Services</h5>
-                            <p>In dealing with disruptive economic and legal challenge, our firm also provide various legal services.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="counter">
-            <div class="counter_div">
-                <h4>Some count that matters</h4>
-                <p>Our achievement in the journey depicted in numbers</p>
-                <div class="counter_list">
-                    <div class="single_box">
-                        <h6>30</h6>
-                        <p>Clients</p>
-                    </div>
-                    <div class="single_box">
-                        <h6>300+</h6>
-                        <p>Taken business legalities</p>
-                    </div>
-                    <div class="single_box">
-                        <h6>8</h6>
-                        <p>Years of Journey</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="testimonial_id">
-            <h4>Clients Testimonial</h4>
-            <div class="testimonial_div">
-                <div class="single_testimonial">
-                    <div class="comment_box">
-                        <h6>Incredible Experience</h6>
-                        <p>
-                            We had an incredible experience working with Landify and were
-                            impressed they made such a big difference in only three weeks.
-                            Our team is so grateful for the wonderful improvements they made
-                            and their ability to get familiar with the concept so quickly.
-                        </p>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="client_box">
-                        <div class="image">
-                            <img src="./assets/images/testimonial_photo/client_photo.png" alt="client_image" />
-                        </div>
-                        <div class="client_info">
-                            <h5>Anya Tailor Joy</h5>
-                            <p>CEO, SF Industires</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_testimonial">
-                    <div class="comment_box">
-                        <h6>Incredible Experience</h6>
-                        <p>
-                            We had an incredible experience working with Landify and were
-                            impressed they made such a big difference in only three weeks.
-                            Our team is so grateful for the wonderful improvements they made
-                            and their ability to get familiar with the concept so quickly.
-                        </p>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="client_box">
-                        <div class="image">
-                            <img src="./assets/images/testimonial_photo/client_photo.png" alt="client_image" />
-                        </div>
-                        <div class="client_info">
-                            <h5>Anya Tailor Joy</h5>
-                            <p>CEO, SF Industires</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="Contact_id"></section>
-    <div class="contact_info_div">
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="banner.png" alt="Full Width Logo" class="full-width-logo">
+    </div>
+    <header>
+        <h1>M. A. Idaiye & Co</h1>
+        <p>Customary • Civil • Criminal • Agreements • Wills</p>
+    </header>
+    <section class="grid-container">
+        <!-- Service 1 -->
+         <div class="grid-item">
+            <img src="images/customary.png" alt="Customary Law" class="top-image">
+            <h2>Customary Law</h2>
+            <p>We specialize in land disputes, family inheritance, and traditional agreements—preserving culture with legal expertise across Nigeria's diverse customs.</p>
+        </div>
+
+        <!-- Service 2 -->
+         <div class="grid-item">
+            <img src="images/civil.png" alt="Civil Litigation" class="top-image">
+            <h2>Civil Litigation</h2>
+            <p>Handling disputes from contracts, land, debt, and defamation. Whether settlement or court, we pursue swift and fair outcomes.</p>
+        </div>
+        
+        <!-- Service 3 -->
+         <div class="grid-item">
+            <img src="images/criminal.png" alt="Criminal Defense" class="top-image">
+            <h2>Criminal Defense</h2>
+            <p>From bail to trial, we defend your rights in assault, theft, fraud, and cybercrime cases—ensuring fair process and strong representation.</p>
+        </div>
+
+    <!-- Service 4 -->
+    <div class="grid-item">
+      <img src="images/agreements.png" alt="Agreements" class="top-image">
+      <h2>Agreements</h2>
+      <p>We draft and review business, employment, tenancy, and partnership contracts. Legal clarity and enforceability guaranteed.</p>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="grid-item">
+      <img src="images/wills.png" alt="Wills & Estates" class="top-image">
+      <h2>Wills & Estates</h2>
+      <p>Plan ahead with valid wills, probate guidance, and estate planning. Protect your family and honor your legacy legally and peacefully.</p>
+    </div>
+
+    <!-- Optional: Fill out to 3×3 -->
+    <div class="grid-item">
+      <img src="images/team.png" alt="Our Team" class="top-image">
+      <h2>Our Team</h2>
+      <p>Meet our legal minds—experienced, diligent, and client-focused professionals working with integrity and excellence.</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/testimonials.png" alt="Testimonials" class="top-image">
+      <h2>Testimonials</h2>
+      <p>Hear from clients who found resolution, peace, and justice through our firm’s unwavering representation and support.</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/contact.png" alt="Contact Us" class="top-image">
+      <h2>Contact Us</h2>
+      <p>Call, WhatsApp, or email. We're here to listen, respond quickly, and stand with you through every legal journey.</p>
+    </div>
+
+  </section>
+   <div class="contact_info_div">
         <h4>Complex Questions?</h4>
         <p>
             Request for a personalized budget for your legal problem. We will
@@ -217,15 +109,14 @@
             <button type="submit">Send Message</button>
         </form>
     </div>
-    <div class="image">
-        <img src="./assets/images/contact_image/contact_image.png" alt="contact_image" />
-    </div>
-        <footer id="site-footer">
-       		 <p>Copyright &copy; 2025 M. A. Idaiye & Co</p>
-        		<a href="https://api.whatsapp.com/send?phone=2348023510440">
-            			<img src="./assets/images/whatsapp-logo.png" alt="WhatsApp" style="width: 32px; height: 32px;">
-       			</a>
-   	 </footer>
-    </div>
+  <footer>
+    <p>&copy; 2025 M. A. Idaiye & Co. All rights reserved.</p>
+    <a href="https://api.whatsapp.com/send?phone=2348023510440">
+        <img src="./assets/images/whatsapp-logo.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
