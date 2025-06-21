@@ -1,24 +1,31 @@
-// Optional: scroll to top or future interactivity
+// Site Loaded Message
 console.log("Site loaded for M. A. Idaiye & Co.");
 
-// Highlight active link based on current page
+// === Highlight Active Link in Navbar ===
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll('.topnav-right a');
   const currentPage = window.location.pathname.split('/').pop() || "index.html";
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage) {
+
+    // Highlight the link if it matches current page or is "services.html" and page ends with "-form.html"
+    if (
+      href === currentPage ||
+      (href === "services.html" && currentPage.endsWith("-form.html"))
+    ) {
       link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 });
 
-
-// For Services
-
+// === Modal Service Request Handler ===
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('service-modal');
+  if (!modal) return; // If modal doesn't exist, skip this block
+
   const closeBtn = modal.querySelector('.modal-close');
   const titleEl = document.getElementById('modal-title');
   const serviceType = document.getElementById('service-type');
@@ -34,15 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  closeBtn.addEventListener('click', () => modal.style.display = 'none');
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
 
   window.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
   });
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    // Replace with your preferred form handling (e.g. mailto or backend)
+    // Simulate submission - replace with real backend or email integration
     alert(`Service requested: ${serviceType.value}`);
     modal.style.display = 'none';
     form.reset();
