@@ -59,3 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 });
+
+// === Testimonial Submission ===
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('testimonial-form');
+  const ticker = document.getElementById('testimonial-ticker');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('testimonial-name').value.trim();
+    const message = document.getElementById('testimonial-message').value.trim();
+
+    if (!name || !message) return;
+
+    const now = new Date();
+    const datetime = now.toLocaleString(); // Local date & time
+
+    const testimonial = document.createElement('span');
+    testimonial.textContent = `"${message}" - ${name} (${datetime})`;
+    ticker.appendChild(testimonial);
+
+    // Reset form
+    form.reset();
+  });
+});
