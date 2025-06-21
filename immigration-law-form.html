@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+   <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- MY EXTERNAL CSS  -->
+    <title>M. A. Idaiye & Co. | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <div class="topnav-right">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+            <a href="about.html"><i class="fa fa-fw fa-info-circle"></i>About</a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="services.html"><i class="fa fa-fw fa-cogs"></i> Our Services</a>
+        </div>
+    </div>
+    
+    <!-- Logo Section -->
+     <div class="logo-container">
+      <img src="banner.png" alt="Full Width Logo" class="full-width-logo">
+      <img src="./images/justice-icon.png" alt="Justice Icon" class="justice-icon">
+    </div>
+    
+    <header class="hero-header">
+      <h2>“The power of the lawyer is in the uncertainty of the law.”</h2>
+      <p>— Jeremy Bentham</p>
+    </header>
+<body>
+
+  <div class="form-container">
+    <h2><i class="fa fa-passport"></i> Immigration & Nationality Law</h2>
+    <form action="mailto:maidaiye@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="Phone Number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="immigration_type">Type of Immigration Assistance:</label>
+        <select id="immigration_type" name="Immigration Type" required>
+          <option value="">-- Select --</option>
+          <option value="Visa Application">Visa Application</option>
+          <option value="Work Permit">Work Permit</option>
+          <option value="Residency/Citizenship">Residency / Citizenship</option>
+          <option value="Asylum or Refugee Protection">Asylum / Refugee Protection</option>
+          <option value="Family Sponsorship">Family Sponsorship</option>
+          <option value="Appeals or Deportation Defense">Appeals / Deportation Defense</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="details">Describe Your Immigration Needs or Concern:</label>
+        <textarea id="details" name="Details" rows="6" placeholder="Give a brief overview of your immigration issue or situation." required></textarea>
+      </div>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+    </form>
+  </div>
+
+  <footer>
+      <p>&copy; 2025 M. A. Idaiye & Co. All rights reserved.</p>
+      <div class="contact-links">
+        
+        <!-- Call -->
+         <a href="tel:+2348023510440" title="Call M. A. Idaiye">
+          <i class="fa-solid fa-phone" style="color: antiquewhite;"></i> Call
+        </a>
+        
+        <!-- Email -->
+         <a href="mailto:maidaiye@gmail.com" title="Send Email">
+          <i class="fa-solid fa-envelope" style="color: #720E9E;"></i> Email
+        </a>
+        
+        <!-- WhatsApp -->
+         <a href="https://api.whatsapp.com/send?phone=2348023510440" title="Chat on WhatsApp" target="_blank">
+          <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> WhatsApp
+        </a>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
