@@ -47,6 +47,7 @@ header {
 .topnav a.active {
   background-color: #aeb06fed;
   color: white;
+  border-radius: 5px;
 }
 
 /* Right-aligned section inside the top navigation */
