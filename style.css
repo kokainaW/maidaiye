@@ -86,6 +86,7 @@ header {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .justice-icon {
@@ -178,23 +179,76 @@ footer {
   margin-top: 2rem;
 }
 
-#hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.hero-header {
+  background-color: #f4f7fb;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.hero-container h1 {
-    font-size: 3rem;
+.logo-container .logo {
+  max-width: 180px;
+  margin-bottom: 20px;
 }
 
-.hero-container p {
-    font-size: 1.2rem;
+.intro-banner {
+  margin: 20px auto 30px;
+  padding: 20px;
+  background-color: #e6eef8;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
+.intro-banner h3 {
+  font-size: 1.5rem;
+  color: #002147;
+  margin-bottom: 10px;
+}
+
+.intro-banner p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+.quote-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-left: 5px solid #002147;
+}
+
+.quote-box h2 {
+  font-size: 1.8rem;
+  color: #002147;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.quote-box p {
+  font-style: italic;
+  color: #555;
+}
+
+@keyframes glitter {
+  0%, 100% {
+    color: #333;
+    text-shadow: 0 0 3px #aaa, 0 0 5px #ccc;
+  }
+  50% {
+    color: #000;
+    text-shadow: 0 0 8px #fff, 0 0 12px #ccc;
+  }
+}
+
+.quote-box h2,
+.quote-box p {
+  animation: glitter 2s infinite;
+}
+
 
 .cta-button {
     background-color: #ff9800;
