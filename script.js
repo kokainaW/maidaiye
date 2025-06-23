@@ -1,4 +1,4 @@
-// Site Loaded Message
+// === Site Loaded Message ===
 console.log("Site loaded for M. A. Idaiye & Co.");
 
 // === Highlight Active Link in Navbar ===
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
 
-    // Highlight the link if it matches current page or is "services.html" and page ends with "-form.html"
     if (
       href === currentPage ||
       (href === "services.html" && currentPage.endsWith("-form.html"))
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // === Modal Service Request Handler ===
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('service-modal');
-  if (!modal) return; // If modal doesn't exist, skip this block
+  if (!modal) return;
 
   const closeBtn = modal.querySelector('.modal-close');
   const titleEl = document.getElementById('modal-title');
@@ -53,19 +52,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    // Simulate submission - replace with real backend or email integration
     alert(`Service requested: ${serviceType.value}`);
     modal.style.display = 'none';
     form.reset();
   });
 });
 
-// === Testimonial Submission ===
+// === Testimonial Submission with JSONBin Integration ===
 document.addEventListener('DOMContentLoaded', () => {
+  const API_KEY = "$2a$10$Sv81zXtU6lJAkLBA8hTSKOg.DgjWcZcvKSvduv3G2NwIAPwbQZzcO";
+  const BIN_ID = "6858f8898960c979a5af8e71";
+  const BIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
   const form = document.getElementById('testimonial-form');
   const ticker = document.getElementById('testimonial-ticker');
 
-  form.addEventListener('submit', function (e) {
+  // Load existing testimonials from JSONBin
+  async function loadTestimonials() {
+    try {
+      const response = await fetch(BIN_URL, {
+        headers: { 'X-Master-Key': API_KEY }
+      });
+      const data = await response.json();
+      const testimonials = data.record.testimonials || [];
+
+      ticker.innerHTML = ''; // Clear previous testimonials
+
+      testimonials.forEach(t => {
+        const span = document.createElement('span');
+        span.textContent = `"${t.message}" - ${t.name}`;
+        ticker.appendChild(span);
+      });
+    } catch (err) {
+      console.error('Failed to load testimonials:', err);
+    }
+  }
+
+  // Submit new testimonial and update JSONBin
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const name = document.getElementById('testimonial-name').value.trim();
@@ -73,14 +97,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!name || !message) return;
 
-    const now = new Date();
-    const datetime = now.toLocaleString(); // Local date & time
+    try {
+      // Get current testimonials
+      const response = await fetch(BIN_URL, {
+        headers: { 'X-Master-Key': API_KEY }
+      });
+      const data = await response.json();
+      const testimonials = data.record.testimonials || [];
 
-    const testimonial = document.createElement('span');
-    testimonial.textContent = `"${message}" - ${name} (${datetime})`;
-    ticker.appendChild(testimonial);
+      // Add new testimonial
+      const updated = [...testimonials, { name, message }];
 
-    // Reset form
-    form.reset();
+      // Save updated testimonials to JSONBin
+      await fetch(BIN_URL, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': API_KEY
+        },
+        body: JSON.stringify({ testimonials: updated })
+      });
+
+      // Reload ticker and reset form
+      await loadTestimonials();
+      form.reset();
+    } catch (err) {
+      console.error('Failed to submit testimonial:', err);
+    }
   });
+
+  // Load testimonials on page load
+  loadTestimonials();
 });
